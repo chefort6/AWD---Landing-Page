@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: black;
+}
+
+.letters {
+    perspective: 1000px;   
+    font-family: cursive;
+    color: ghostwhite;
+}
+
+.letter {
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    line-height: 0.8;
+    font-size: 5rem;
+    text-shadow: black 0 0 5px;
+}
+
+.letter.active {
+    animation: jump 1s ease-in-out;
+    transform-origin: bottom left;
+}
+
+#_letter1.active {
+    color: #c76363;
+}
+
+#_letter2.active {
+    color: #78c078;
+}
+
+#_letter3.active {
+    color: #7a7ab4;
+}
+
+#_letter4.active {
+    color: #d8da5e;
+}
+
+#_letter5.active {
+    color: #258dce;
+}
+
+#_letter6.active {
+    color: #d37323;
+}
+
+#_letter7.active {
+    color: #26ecdb;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0) rotate(180deg);
+    }
+    25% {
+        transform: scale(2) translate(0, -150px);
+    }
+    75% {
+        transform: scale(1.1, 1.1) translate(0, 200px);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}

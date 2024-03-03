@@ -1,0 +1,41 @@
+.btn {
+    padding: 30px 50px;
+    display: block;
+    margin: 45px 0 40px 75px;
+    box-sizing: border-box;
+    width: calc(25% - 150px); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: larger;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.btn-1 { background-color: tomato; }
+.btn-2 { background-color: lightsteelblue; }
+.btn-3 { background-color: forestgreen; }
+.btn-4 { background-color: gold;}
+.btn-5 { background-color: pink; }
+.btn-6 { background-color: rebeccapurple; }
+.btn-7 { background-color: darkorange; }
+
+.box {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(red, green, blue, .1); 
+    position: absolute;
+    top: -700px;
+    left: 70%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease, border-color .7s ease, background-color 0.7s ease-in-out;
+    border: 10px solid white;
+}
+
+.btn-1 ~ .box { border-color: tomato; }
+.btn-2 ~ .box { border-color: lightsteelblue; }
+.btn-3 ~ .box { border-color: forestgreen; }
+.btn-4 ~ .box { border-color: gold; }
+.btn-5 ~ .box { border-color: pink; }
+.btn-6 ~ .box { border-color: rebeccapurple; }
+.btn-7 ~ .box { border-color: darkorange; }
